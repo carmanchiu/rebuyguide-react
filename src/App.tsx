@@ -3,25 +3,43 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Profile from './components/Profile';
 import Home from './components/Home';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
 
 function App() {
     return (
         <Router>
-            <div>
-                <nav>
+            <Header>
+                <div className="row">
+                    <div className="col">
+                        1 of 3
+                    </div>
+                    <div className="col-6">
+                        2 of 3 (wider)
+                    </div>
+                    <div className="col">
+                        3 of 3
+                    </div>
+                </div>
+            </Header>
+            <div style={{display: 'flex'}}>
+                <Sidebar/>
+                <div style={{flexGrow: 1, padding: '20px'}}>
+                    <nav>
                     <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/profile">Profile, but I can name this anything</Link>
-                        </li>
-                    </ul>
-                </nav>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                </Routes>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/profile">Profile, but I can name this anything</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/profile" element={<Profile />} />
+                    </Routes>
+                </div>
             </div>
         </Router>
     );
@@ -29,7 +47,29 @@ function App() {
 
 export default App;
 
-
+// function App() {
+//     return (
+//         <Router>
+//             <div>
+//                 <SideBar />
+//                 <nav>
+//                     <ul>
+//                         <li>
+//                             <Link to="/">Home</Link>
+//                         </li>
+//                         <li>
+//                             <Link to="/profile">Profile, but I can name this anything</Link>
+//                         </li>
+//                     </ul>
+//                 </nav>
+//                 <Routes>
+//                     <Route path="/" element={<Home />} />
+//                     <Route path="/profile" element={<Profile />} />
+//                 </Routes>
+//             </div>
+//         </Router>
+//     );
+// }
 
 // STARTING BOILERPLATE
 // import { useState } from 'react'
