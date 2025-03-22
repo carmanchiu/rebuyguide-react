@@ -9,58 +9,20 @@ function App() {
     return (
         <Router>
             <Header />
-            <div>
+            <div style={{ display: 'flex' }}>
                 <Sidebar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/profile" element={<Profile />} />
-                </Routes>
+                <main style={{ flexGrow: 1, padding: '20px' }}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/profile" element={<Profile />} />
+                    </Routes>
+                </main>
             </div>
         </Router>
     );
 }
 
 export default App;
-
-
-// import React from 'react';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-// import './App.css';
-// import Profile from './components/Profile';
-// import Home from './components/Home';
-// import Sidebar from './components/Sidebar';
-// import Header from './components/Header';
-
-
-// function App() {
-//     return (
-//         <Router>
-//             <Header>
-//             </Header>
-//             <div style={{display: 'flex'}}>
-//                 <Sidebar/>
-//                 <div style={{flexGrow: 1, padding: '20px'}}>
-//                     <nav>
-//                     <ul>
-//                             <li>
-//                                 <Link to="/">Home</Link>
-//                             </li>
-//                             <li>
-//                                 <Link to="/profile">Profile, but I can name this anything</Link>
-//                             </li>
-//                         </ul>
-//                     </nav>
-//                     <Routes>
-//                         <Route path="/" element={<Home />} />
-//                         <Route path="/profile" element={<Profile />} />
-//                     </Routes>
-//                 </div>
-//             </div>
-//         </Router>
-//     );
-// }
-
-// export default App;
 
 // STARTING BOILERPLATE
 // import { useState } from 'react'
