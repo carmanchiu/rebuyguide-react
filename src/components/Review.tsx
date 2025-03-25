@@ -14,6 +14,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import StarRating from './StarRating';
+
+// practice importing local img in src folder
+import reactLogo from '../assets/react.svg';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -39,7 +43,7 @@ const ExpandMore = styled((props) => {
   ],
 }));
 
-export default function RecipeReviewCard() {
+export default function Review() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -47,11 +51,11 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 500 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            CC
           </Avatar>
         }
         action={
@@ -59,13 +63,18 @@ export default function RecipeReviewCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title="Product Name"
+        subheader={
+          <div>
+            <StarRating />
+            <p>Would Repurchase?</p>
+          </div>
+        }
       />
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image={reactLogo}
         alt="Paella dish"
       />
       <CardContent>
