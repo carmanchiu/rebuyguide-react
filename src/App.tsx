@@ -11,7 +11,7 @@ function App() {
             <Header />
             <div style={{ display: 'flex' }}>
                 <Sidebar />
-                <main style={{ flexGrow: 1, padding: '20px' }}>
+                <main style={{ flexGrow: 1, padding: '20px', display: 'flex', justifyContent: 'center' }}>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/profile" element={<Profile />} />
