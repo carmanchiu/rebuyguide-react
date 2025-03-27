@@ -2,7 +2,7 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
-export default function ContainedButtons() {
+export default function CreateReviewButton() {
     return (
         <Stack direction="row">
             <Button variant="contained" href="/">
