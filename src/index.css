@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* Practice padding */
+/* #root {
+  padding-inline: 50px;
+} */
+
+/* Template */
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

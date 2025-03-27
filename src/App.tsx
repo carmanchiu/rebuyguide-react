@@ -8,15 +8,17 @@ import Profile from './components/Profile';
 function App() {
     return (
         <Router>
-            <Header />
-            <div style={{ display: 'flex' }}>
-                <Sidebar />
-                <main style={{ flexGrow: 1, padding: '20px', display: 'flex', justifyContent: 'center' }}>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/profile" element={<Profile />} />
-                    </Routes>
-                </main>
+            <div className="px-4 md:px-0">
+                <Header />
+                <div style={{ display: 'flex' }}>
+                    <Sidebar />
+                    <main style={{ flexGrow: 1, padding: '30px' }}>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/profile" element={<Profile />} />
+                        </Routes>
+                    </main>
+                </div>
             </div>
         </Router>
     );
