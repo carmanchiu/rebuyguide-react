@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import Sidebar from './components/Sidebar';
 import Profile from './components/Profile';
+import CreateReview from './components/CreateReview';
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/profile" element={<Profile />} />
+                            <Route path="/createreview" element={<CreateReview />} />
                         </Routes>
                     </main>
                 </div>
