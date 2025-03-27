@@ -5,7 +5,7 @@ import Stack from '@mui/material/Stack';
 export default function CreateReviewButton() {
     return (
         <Stack direction="row">
-            <Button variant="contained" href="/">
+            <Button variant="contained" href="/createreview">
                 Create Review
             </Button>
         </Stack>
