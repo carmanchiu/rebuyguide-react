@@ -2,11 +2,11 @@
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 
-export default function CreateReviewButton() {
+export default function CreateReviewButton({children}) {
     return (
         <Stack direction="row">
             <Button variant="contained" href="/create-review">
-                Create Review
+                {children}
             </Button>
         </Stack>
     );
