@@ -7,7 +7,7 @@ function Profile() {
         <div>
             <h2>Profile</h2>
             <p>Rendering from profile component!</p>
-            <CreateReviewButton />
+            <CreateReviewButton>Create Review</CreateReviewButton>
             <div style={{ padding: '20px', display: 'flex', justifyContent: 'center' }}>
                 <Review />
             </div>
